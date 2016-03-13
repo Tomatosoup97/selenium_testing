@@ -1,0 +1,40 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatibile" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="author" content="Mateusz Urbańczyk">
+		<link href="{% static 'apps_manager/css/pure.css' %}" rel="stylesheet">
+	    <link href="{% static 'apps_manager/css/style.css' %}" rel="stylesheet">
+	    <link rel="shortcut icon" href="favicon.ico">
+		{% block head %}
+		{% endblock head %}
+	    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+	        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+		<!--[if lte IE 8]>
+		    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+		<![endif]-->
+		<!--[if gt IE 8]><!-->
+		    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+		<!--<![endif]-->
+	</head>
+	<body>
+		{% block content %}
+			
+		{% endblock content %}
+		<footer>
+			<h2>Kato.py #3</h2>
+		</footer>
+		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		{% block scripts %}
+		{% endblock scripts %}
+	</body>
+</html>

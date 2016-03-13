@@ -1,0 +1,12 @@
+{% extends "apps_manager/base.html" %}
+{% load staticfiles %}
+{% block head %}
+	<title>{{ message }}</title>
+{% endblock head %}
+{% block content %}
+	<div class="pure-g">
+		<div class="pure-u-1-1 center">
+			<h1>{{ message }}</h1>
+		</div>
+	</div>
+{% endblock content %}

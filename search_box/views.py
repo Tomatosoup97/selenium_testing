@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from django.views.generic import View, TemplateView
+from django.views.generic.edit import FormView
+from django.core.mail import send_mail
 
-# Create your views here.
+class HomeView(TemplateView):
+	template_name = "apps_manager/index.html"

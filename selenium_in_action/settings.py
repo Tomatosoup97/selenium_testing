@@ -34,7 +34,7 @@ INSTALLED_APPS = [
 ]
 
 #My apps
-INSTALLED_APPS = [
+INSTALLED_APPS += [
     'apps_manager',
     'order',
     'form_submission',
@@ -43,7 +43,10 @@ INSTALLED_APPS = [
 
 #3rd party apps
 INSTALLED_APPS += [
+    'crispy_forms',
 ]
+
+#CRISPY_TEMPLATE_PACK = 'uni_form'
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
