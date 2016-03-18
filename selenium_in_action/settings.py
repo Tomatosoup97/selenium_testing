@@ -1,6 +1,5 @@
 """
 Django 1.9.4.
-
 """
 
 import os
@@ -37,8 +36,7 @@ INSTALLED_APPS = [
 INSTALLED_APPS += [
     'apps_manager',
     'order',
-    'form_submission',
-    'search_box',
+    'user',
 ]
 
 #3rd party apps

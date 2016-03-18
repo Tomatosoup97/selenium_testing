@@ -1,6 +1,9 @@
 .center {
 	text-align: center;
 }
+.padding {
+	padding: 1vw 15vw;
+}
 footer {
 	text-align: center;
 }

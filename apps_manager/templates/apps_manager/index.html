@@ -1,10 +1,13 @@
 {% extends "apps_manager/base.html" %}
 {% block content %}
-	<nav>
-		<ul>
-			<li><a href="{% url 'order:index' %}">Order</a></li>
-			<li><a href="{% url 'form:index' %}">Form submission</a></li>
-			<li><a href="{% url 'searchbox:index' %}">Search box</a></li>
-		</ul>
-	</nav>
+	<div class="pure-g">
+		<div class="pure-u-1-1 padding">
+			<nav>
+				<ul>
+					<li><a href="{% url 'order:index' %}">Order</a></li>
+					<li><a href="{% url 'user:index' %}">User</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
 {% endblock content %}

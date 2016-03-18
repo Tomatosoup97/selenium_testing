@@ -1,13 +1,18 @@
 {% extends "apps_manager/base.html" %}
 {% load staticfiles %}
+{% load crispy_forms_tags %}
 {% block head %}
-	<title>The product have been ordered</title>
+	<title>User</title>
 {% endblock head %}
 {% block content %}
 	<div class="pure-g padding">
 		<div class="pure-u-1-1">
-			<h1>Thanks for ordering the product, please check your email to confirm<br>
-				Activation link deactivates after 2 hours</h1>
+			<h1>USER</h1>
+			<form method="POST">
+			{% csrf_token %}
+			{{ form|crispy }}
+			<button type="submit">Create account</button>
+			</form>
 		</div>
 	</div>
 {% endblock content %}
