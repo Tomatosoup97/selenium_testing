@@ -2,14 +2,10 @@
 {% load staticfiles %}
 {% load crispy_forms_tags %}
 {% block head %}
-	<title>Order</title>
+	<title>{{user.username }} -  User Profile</title>
 {% endblock head %}
 {% block content %}
-	<main class="pure-u-1-1 center">
-		<form method="POST">
-			{% csrf_token %}
-			{{ form|crispy }}
-			<button type="submit">Zamów</button>
-		</form>
+	<main class="padding">
+		<h1>Profile of user {{ user.username }}</h1>
 	</main>
 {% endblock content %}

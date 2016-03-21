@@ -39,11 +39,11 @@ class OrderActivationTestCase(StaticLiveServerTestCase):
 				'id_name': 'name',
 				'id_surname': 'surname',
 				'id_email': 'example@gmail.com',
-				'id_quantity': 3,
+				'id_quantity': 1,
 				'id_product': 1,
 			}
 		form = self.driver.find_element_by_css_selector(
-						'body > div.pure-g > main > form')
+						'main > form')
 		form_inputs = form.find_elements_by_css_selector(
 						'div .controls input')
 		form_select = Select(form.find_element_by_css_selector(
@@ -64,13 +64,6 @@ class OrderActivationTestCase(StaticLiveServerTestCase):
 		self.fill_form()
 		if self.SLOW_DOWN:
 			time.sleep(3)
-		try:
-			element = WebDriverWait(self.driver, 3).until(
-				self.driver.find_element_by_css_selector('div .controlass select')
-			)
-		except NoSuchElementException:
-			print("Ni ma go!")
-			raise NoSuchElementException
 		
 		assert "The product have been ordered" in self.driver.title
 

@@ -18,4 +18,4 @@ class Order(models.Model):
 	date = models.DateTimeField()
 
 	def __str__(self):
-		return "Zamowienie nr: {}".format(self.id)
+		return "Order number: {}".format(self.id)

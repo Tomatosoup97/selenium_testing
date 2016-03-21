@@ -2,17 +2,15 @@
 {% load staticfiles %}
 {% load crispy_forms_tags %}
 {% block head %}
-	<title>User</title>
+	<title>Sign Up</title>
 {% endblock head %}
 {% block content %}
-	<div class="pure-g padding">
-		<div class="pure-u-1-1">
-			<h1>USER</h1>
-			<form method="POST">
+	<main class="padding">
+		<h1>USER</h1>
+		<form method="POST">
 			{% csrf_token %}
 			{{ form|crispy }}
 			<button type="submit">Create account</button>
-			</form>
-		</div>
-	</div>
+		</form>
+	</main>
 {% endblock content %}

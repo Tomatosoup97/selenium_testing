@@ -8,5 +8,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^order/', include('order.urls', namespace="order")),
     url(r'^user/', include('user.urls', namespace="user")),
-    url(r'^', include('apps_manager.urls', namespace="home")),
+    url(r'^', include('apps_manager.urls', namespace="root")),
 ]

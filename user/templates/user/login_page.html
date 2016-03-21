@@ -1,12 +1,11 @@
 {% extends "apps_manager/base.html" %}
 {% load staticfiles %}
 {% block head %}
-	<title>User index</title>
+	<title>{{ message }}</title>
 {% endblock head %}
 {% block content %}
 	<div class="center">
-		<h1>User actions</h1>
-		<a href="{% url 'user:sign_up' %}">Sign In</a>
-		<a href="{% url 'user:sign_in' %}">Sign Up</a>
+		<h1>{{ message }}</h1>
+		<a href="{% url 'user:index' %}">Go back to home page</a>
 	</div>
 {% endblock content %}
