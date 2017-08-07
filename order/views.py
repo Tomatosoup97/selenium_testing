@@ -36,7 +36,7 @@ def order_confirmation(request, activation_key):
 	order = get_object_or_404(Order, activation_key=activation_key)
 	key_expires = order.date + datetime.timedelta(1/12)
 	message = ""
-	
+
 	if order.is_activated:
 		message = "This order have already been confirmed"
 	elif key_expires < timezone.now():
@@ -44,7 +44,7 @@ def order_confirmation(request, activation_key):
 	else:
 		order.is_activated = True
 		order.save()
-		message = "Your order have been confirmed. {}".format(
-														order.is_activated)
+		message = "Your order have been confirmed."
+
 	return render_to_response(
 		'order/activated_key.html', {'message': message})
